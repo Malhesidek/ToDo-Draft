@@ -6,4 +6,8 @@ class Task {
     required this.name,
     required this.isActive,
   });
+
+  void toggleStatus() {
+    isActive = !isActive;
+  }
 }

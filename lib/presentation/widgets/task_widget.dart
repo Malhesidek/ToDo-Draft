@@ -3,9 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:todo_draft/constants.dart';
+import 'package:todo_draft/data/models/task.dart';
 
 class TaskWidget extends StatefulWidget {
-  const TaskWidget({super.key});
+  final Task task;
+
+  const TaskWidget({super.key, required this.task});
 
   @override
   State<TaskWidget> createState() => _TaskWidgetState();
@@ -23,14 +26,21 @@ class _TaskWidgetState extends State<TaskWidget> {
       child: Row(
         children: [
           Checkbox(
-            value: false,
-            onChanged: (status){},
+            value: widget.task.isActive,
+            onChanged: (status) {
+              setState(() {
+                widget.task.toggleStatus();
+              });
+            },
             activeColor: kColorBlue1,
           ),
           Expanded(
               child: Text(
-            "This is the example",
-            style: kTextStyle,
+            widget.task.name,
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: 14,
+                decoration: widget.task.isActive ? TextDecoration.lineThrough : TextDecoration.none),
             textAlign: TextAlign.center,
           )),
           IconButton(

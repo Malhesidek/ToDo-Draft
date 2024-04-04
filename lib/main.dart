@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:todo_draft/constants.dart';
+import 'package:todo_draft/data/models/task.dart';
 import 'package:todo_draft/presentation/widgets/task_widget.dart';
 
 void main() {
@@ -46,7 +47,7 @@ class _MainPageState extends State<MainPage> {
         margin: EdgeInsets.symmetric(vertical: 2),
         child: Column(
           children: [
-            TaskWidget(),
+            TaskWidget(task: Task(name: "First task", isActive: true),),
           ],
         ),
       ),
