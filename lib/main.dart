@@ -45,7 +45,6 @@ class _MainPageState extends State<MainPage> {
         backgroundColor: kColorBlue1,
       ),
       body: Container(
-        margin: EdgeInsets.symmetric(vertical: 2),
         child: Column(
           children: [
             TaskFieldWidget(),

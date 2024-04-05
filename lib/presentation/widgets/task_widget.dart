@@ -18,7 +18,7 @@ class _TaskWidgetState extends State<TaskWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 2),
+      margin: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(4)),
           color: kColorMint2),
@@ -39,7 +39,7 @@ class _TaskWidgetState extends State<TaskWidget> {
             widget.task.name,
             style: TextStyle(
                 color: Colors.black,
-                fontSize: 14,
+                fontSize: 16,
                 decoration: widget.task.isActive ? TextDecoration.lineThrough : TextDecoration.none),
             textAlign: TextAlign.center,
           )),

@@ -22,10 +22,16 @@ class _TaskFieldWidgetState extends State<TaskFieldWidget> {
         children: [
           Expanded(
               child: TextField(
-                
-            decoration: InputDecoration(border: OutlineInputBorder(), hintText: "Enter your task", contentPadding: EdgeInsets.all(8)),
+            decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: "Enter your task",
+                contentPadding: EdgeInsets.all(8)),
           )),
-          IconButton(onPressed: () {}, icon: Icon(Icons.send))
+          IconButton(
+              onPressed: () {
+                //TODO add function from taskList BLOC
+              },
+              icon: Icon(Icons.send))
         ],
       ),
     );
